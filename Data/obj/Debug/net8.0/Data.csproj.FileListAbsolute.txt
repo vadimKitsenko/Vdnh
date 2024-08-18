@@ -17,3 +17,4 @@ D:\Projects\VdnhApi\VdnhApi\Data\obj\Debug\net8.0\Data.dll
 D:\Projects\VdnhApi\VdnhApi\Data\obj\Debug\net8.0\refint\Data.dll
 D:\Projects\VdnhApi\VdnhApi\Data\obj\Debug\net8.0\Data.pdb
 D:\Projects\VdnhApi\VdnhApi\Data\obj\Debug\net8.0\ref\Data.dll
+D:\Projects\VdnhApi\VdnhApi\Data\obj\Debug\net8.0\Data.sourcelink.json

@@ -112,9 +112,10 @@ namespace Services.Admin.Horisontal
 
         public async Task<List<HorisontalViewModel>> GetHorisontalAll()
         {
-            var responce = _horisontal.TableNoTracking
+            var responce = _horisontal.TableNoTracking.Where(h => !h.IsDeleted && h.SecondLevelId == null)
                 .Include(h => h.Img)
                 .Include(h => h.About)
+                .Include(h => h.About!.Images)
                 .Include(h => h.About!.Background)
                 .Include(h => h.About!.Title)
                 .Include(h => h.About!.Main)
@@ -148,13 +149,12 @@ namespace Services.Admin.Horisontal
                         Text = h.About.Text,
                         Number = h.About.Number,
                         Background = _fileManager.GetFileLinksByName(3, h.Id.ToString(), h.About.Background!.Main!).FirstOrDefault(),
-                        Images = h.About.Images!.Where(i => _fileManager.GetFileLinksByName(4, h.Id.ToString(), i.Main!).FirstOrDefault() != null).Select(i => new ImageLink
-                        {
-                            Link = _fileManager.GetFileLinksByName(4, h.Id.ToString(), i.Main!).FirstOrDefault(),
-                            Name = i.Main,
-                            Priority = i.Priority,
-                            Id = i.Id
-                        }).OrderBy(i => i.Priority).ToList()
+                        Images = h.About!.Images!.Where(i => _fileManager.GetFileLinksByName(4, h.Id.ToString(), i.Main!).FirstOrDefault() != null && _fileManager.GetFileLinksByName(9, h.Id.ToString(), i.Main!).FirstOrDefault() != null)
+                    .Select(i => new ImageLink
+                    {
+                        Main = _fileManager.GetFileLinksByName(4, h.Id.ToString(), i.Main!).FirstOrDefault(),
+                        Preview = _fileManager.GetFileLinksByName(9, h.Id.ToString(), i.Main!).FirstOrDefault()
+                    }).OrderBy(i => i.Priority).ToList()
                     }
                 }).ToList();
 

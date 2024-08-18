@@ -19,6 +19,8 @@ namespace Services.Admin.Horisontal
 
         Task<BaseModel> InsertHorisontal(Domain.RequestModel.HorisontalRequestModel? insertModel, long? secondLevelId = null);
 
+        Task<List<HorisontalViewModel>> GetHorisontalAll();
+
         Task<BaseModel> DeleteHorisontal(long? horisontalId);
     }
 }

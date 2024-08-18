@@ -21,3 +21,4 @@ D:\Projects\VdnhApi\VdnhApi\Services\bin\Debug\net8.0\Core.pdb
 D:\Projects\VdnhApi\VdnhApi\Services\bin\Debug\net8.0\Data.pdb
 D:\Projects\VdnhApi\VdnhApi\Services\bin\Debug\net8.0\Domain.pdb
 D:\Projects\VdnhApi\VdnhApi\Services\obj\Debug\net8.0\Services.csproj.Up2Date
+D:\Projects\VdnhApi\VdnhApi\Services\obj\Debug\net8.0\Services.sourcelink.json

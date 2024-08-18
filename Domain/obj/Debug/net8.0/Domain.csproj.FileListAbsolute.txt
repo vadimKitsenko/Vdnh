@@ -19,3 +19,4 @@ D:\Projects\VdnhApi\VdnhApi\Domain\bin\Debug\net8.0\Core.pdb
 D:\Projects\VdnhApi\VdnhApi\Domain\bin\Debug\net8.0\Data.pdb
 D:\Projects\VdnhApi\VdnhApi\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
 D:\Projects\VdnhApi\VdnhApi\Domain\obj\Debug\net8.0\Domain.csproj.Up2Date
+D:\Projects\VdnhApi\VdnhApi\Domain\obj\Debug\net8.0\Domain.sourcelink.json

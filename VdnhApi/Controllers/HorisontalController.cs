@@ -30,7 +30,7 @@ namespace VdnhApi.Controllers
             return await GetAnswerAsync(async () => await horisontal.GetHorisontal(horisontalId));
         }
 
-        [Route("/all"), HttpGet]
+        [Route("all"), HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> GetIdHorisontalAll ()
         {

@@ -175,3 +175,4 @@ D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.W
 D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Projects\VdnhApi\VdnhApi\VdnhApi\obj\Debug\net8.0\VdnhApi.sourcelink.json
