@@ -1,0 +1,102 @@
+2024-08-15 13:50:12.948 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Data.Context.VdnhContext'.
+System.InvalidOperationException: Nullable object must have a value.
+   at lambda_method564(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: Nullable object must have a value.
+   at lambda_method564(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2024-08-15 13:54:12.620 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Data.Context.VdnhContext'.
+System.InvalidOperationException: Nullable object must have a value.
+   at lambda_method564(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: Nullable object must have a value.
+   at lambda_method564(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2024-08-15 14:50:05.155 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Data.Context.VdnhContext'.
+System.InvalidOperationException: Nullable object must have a value.
+   at lambda_method348(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: Nullable object must have a value.
+   at lambda_method348(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2024-08-15 14:51:39.239 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Data.Context.VdnhContext'.
+System.InvalidOperationException: Nullable object must have a value.
+   at lambda_method363(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: Nullable object must have a value.
+   at lambda_method363(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2024-08-15 14:53:54.379 +03:00 [ERR] Файл с таким именем уже существует: D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Release\net8.0\publish\files\AboutImages\26\Снимок экрана от 2024-08-15 13-54-27.png
+2024-08-15 14:53:54.486 +03:00 [ERR] Файл с таким именем уже существует: Снимок экрана от 2024-08-15 13-54-27.png
+System.Exception: Файл с таким именем уже существует: Снимок экрана от 2024-08-15 13-54-27.png
+   at Core.Services.FileManager.CheckFilePath(FileRequestModel fileModel, FileParamsModel fileParams, FileModel fileData) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 448
+   at Core.Services.FileManager.SaveOrDeleteFileAsync(String sFlag, FileRequestModel fileModel, String dataSendFile, IFormFileCollection files, Boolean setResult) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 257
+2024-08-15 14:54:47.294 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Data.Context.VdnhContext'.
+System.InvalidOperationException: Nullable object must have a value.
+   at lambda_method363(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: Nullable object must have a value.
+   at lambda_method363(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2024-08-15 14:54:58.779 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Data.Context.VdnhContext'.
+System.InvalidOperationException: Nullable object must have a value.
+   at lambda_method363(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: Nullable object must have a value.
+   at lambda_method363(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2024-08-15 15:21:48.579 +03:00 [ERR] Файл с таким именем уже существует: D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Release\net8.0\publish\files\TitleImg\15\Снимок экрана от 2024-08-15 13-54-27.png
+2024-08-15 15:21:48.612 +03:00 [ERR] Файл с таким именем уже существует: Снимок экрана от 2024-08-15 13-54-27.png
+System.Exception: Файл с таким именем уже существует: Снимок экрана от 2024-08-15 13-54-27.png
+   at Core.Services.FileManager.CheckFilePath(FileRequestModel fileModel, FileParamsModel fileParams, FileModel fileData) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 448
+   at Core.Services.FileManager.SaveOrDeleteFileAsync(String sFlag, FileRequestModel fileModel, String dataSendFile, IFormFileCollection files, Boolean setResult) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 257
+2024-08-15 15:21:51.418 +03:00 [ERR] Файл с таким именем уже существует: D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Release\net8.0\publish\files\AboutImages\15\Снимок экрана от 2024-08-12 17-06-32.png
+2024-08-15 15:21:51.419 +03:00 [ERR] Файл с таким именем уже существует: Снимок экрана от 2024-08-12 17-06-32.png
+System.Exception: Файл с таким именем уже существует: Снимок экрана от 2024-08-12 17-06-32.png
+   at Core.Services.FileManager.CheckFilePath(FileRequestModel fileModel, FileParamsModel fileParams, FileModel fileData) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 448
+   at Core.Services.FileManager.SaveOrDeleteFileAsync(String sFlag, FileRequestModel fileModel, String dataSendFile, IFormFileCollection files, Boolean setResult) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 257
+2024-08-15 15:22:33.230 +03:00 [ERR] Файл с таким именем уже существует: D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Release\net8.0\publish\files\AboutImages\15\Снимок экрана от 2024-08-12 17-06-32.png
+2024-08-15 15:22:33.231 +03:00 [ERR] Файл с таким именем уже существует: Снимок экрана от 2024-08-12 17-06-32.png
+System.Exception: Файл с таким именем уже существует: Снимок экрана от 2024-08-12 17-06-32.png
+   at Core.Services.FileManager.CheckFilePath(FileRequestModel fileModel, FileParamsModel fileParams, FileModel fileData) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 448
+   at Core.Services.FileManager.SaveOrDeleteFileAsync(String sFlag, FileRequestModel fileModel, String dataSendFile, IFormFileCollection files, Boolean setResult) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 257
+2024-08-15 15:22:43.280 +03:00 [ERR] Файл с таким именем уже существует: D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Release\net8.0\publish\files\TitleImg\15\Снимок экрана от 2024-08-15 13-54-27.png
+2024-08-15 15:22:43.281 +03:00 [ERR] Файл с таким именем уже существует: Снимок экрана от 2024-08-15 13-54-27.png
+System.Exception: Файл с таким именем уже существует: Снимок экрана от 2024-08-15 13-54-27.png
+   at Core.Services.FileManager.CheckFilePath(FileRequestModel fileModel, FileParamsModel fileParams, FileModel fileData) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 448
+   at Core.Services.FileManager.SaveOrDeleteFileAsync(String sFlag, FileRequestModel fileModel, String dataSendFile, IFormFileCollection files, Boolean setResult) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 257
+2024-08-15 15:23:00.767 +03:00 [ERR] Файл с таким именем уже существует: D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Release\net8.0\publish\files\TitleImg\15\Снимок экрана от 2024-08-15 13-54-27.png
+2024-08-15 15:23:00.768 +03:00 [ERR] Файл с таким именем уже существует: Снимок экрана от 2024-08-15 13-54-27.png
+System.Exception: Файл с таким именем уже существует: Снимок экрана от 2024-08-15 13-54-27.png
+   at Core.Services.FileManager.CheckFilePath(FileRequestModel fileModel, FileParamsModel fileParams, FileModel fileData) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 448
+   at Core.Services.FileManager.SaveOrDeleteFileAsync(String sFlag, FileRequestModel fileModel, String dataSendFile, IFormFileCollection files, Boolean setResult) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 257
+2024-08-15 15:23:29.987 +03:00 [ERR] Файл с таким именем уже существует: D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Release\net8.0\publish\files\AboutImages\15\roma.png
+2024-08-15 15:23:29.987 +03:00 [ERR] Файл с таким именем уже существует: roma.png
+System.Exception: Файл с таким именем уже существует: roma.png
+   at Core.Services.FileManager.CheckFilePath(FileRequestModel fileModel, FileParamsModel fileParams, FileModel fileData) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 448
+   at Core.Services.FileManager.SaveOrDeleteFileAsync(String sFlag, FileRequestModel fileModel, String dataSendFile, IFormFileCollection files, Boolean setResult) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 257
+2024-08-15 15:23:47.272 +03:00 [ERR] Файл с таким именем уже существует: D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Release\net8.0\publish\files\AboutImages\15\roma.png
+2024-08-15 15:23:47.274 +03:00 [ERR] Файл с таким именем уже существует: roma.png
+System.Exception: Файл с таким именем уже существует: roma.png
+   at Core.Services.FileManager.CheckFilePath(FileRequestModel fileModel, FileParamsModel fileParams, FileModel fileData) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 448
+   at Core.Services.FileManager.SaveOrDeleteFileAsync(String sFlag, FileRequestModel fileModel, String dataSendFile, IFormFileCollection files, Boolean setResult) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 257
+2024-08-15 15:26:46.002 +03:00 [ERR] Файл с таким именем уже существует: D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Release\net8.0\publish\files\AboutImages\15\Снимок экрана от 2024-08-12 15-35-02.png
+2024-08-15 15:26:46.002 +03:00 [ERR] Файл с таким именем уже существует: Снимок экрана от 2024-08-12 15-35-02.png
+System.Exception: Файл с таким именем уже существует: Снимок экрана от 2024-08-12 15-35-02.png
+   at Core.Services.FileManager.CheckFilePath(FileRequestModel fileModel, FileParamsModel fileParams, FileModel fileData) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 448
+   at Core.Services.FileManager.SaveOrDeleteFileAsync(String sFlag, FileRequestModel fileModel, String dataSendFile, IFormFileCollection files, Boolean setResult) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 257
+2024-08-15 15:29:54.234 +03:00 [ERR] Файл с таким именем уже существует: D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Release\net8.0\publish\files\TitleImg\15\luxa.org-inverted-peakpx.jpg
+2024-08-15 15:29:54.235 +03:00 [ERR] Файл с таким именем уже существует: luxa.org-inverted-peakpx.jpg
+System.Exception: Файл с таким именем уже существует: luxa.org-inverted-peakpx.jpg
+   at Core.Services.FileManager.CheckFilePath(FileRequestModel fileModel, FileParamsModel fileParams, FileModel fileData) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 448
+   at Core.Services.FileManager.SaveOrDeleteFileAsync(String sFlag, FileRequestModel fileModel, String dataSendFile, IFormFileCollection files, Boolean setResult) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 257
+2024-08-15 15:29:58.949 +03:00 [ERR] Файл с таким именем уже существует: D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Release\net8.0\publish\files\TitleImg\15\luxa.org-inverted-peakpx.jpg
+2024-08-15 15:29:58.950 +03:00 [ERR] Файл с таким именем уже существует: luxa.org-inverted-peakpx.jpg
+System.Exception: Файл с таким именем уже существует: luxa.org-inverted-peakpx.jpg
+   at Core.Services.FileManager.CheckFilePath(FileRequestModel fileModel, FileParamsModel fileParams, FileModel fileData) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 448
+   at Core.Services.FileManager.SaveOrDeleteFileAsync(String sFlag, FileRequestModel fileModel, String dataSendFile, IFormFileCollection files, Boolean setResult) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 257
+2024-08-15 15:35:19.355 +03:00 [ERR] Файл с таким именем уже существует: D:\Projects\VdnhApi\VdnhApi\VdnhApi\bin\Release\net8.0\publish\files\AboutImages\15\Снимок экрана от 2024-08-08 10-24-30.png
+2024-08-15 15:35:19.355 +03:00 [ERR] Файл с таким именем уже существует: Снимок экрана от 2024-08-08 10-24-30.png
+System.Exception: Файл с таким именем уже существует: Снимок экрана от 2024-08-08 10-24-30.png
+   at Core.Services.FileManager.CheckFilePath(FileRequestModel fileModel, FileParamsModel fileParams, FileModel fileData) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 448
+   at Core.Services.FileManager.SaveOrDeleteFileAsync(String sFlag, FileRequestModel fileModel, String dataSendFile, IFormFileCollection files, Boolean setResult) in D:\Projects\CoreEntityApiGit\Core\Services\FileManager\FileManager.cs:line 257
