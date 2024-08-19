@@ -121,6 +121,7 @@ namespace Services.Admin.Horisontal
                 .Include(h => h.About!.Main)
                 .Include(h => h.About!.Main!.Img)
                 .Include(h => h.About!.Title!.Img)
+                .AsSplitQuery()
                 .ToList()
                 .Select(h => new HorisontalViewModel()
                 {

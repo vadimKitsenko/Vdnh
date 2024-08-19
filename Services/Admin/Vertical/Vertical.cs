@@ -81,46 +81,115 @@ namespace Services.Admin.Vertical
                 .Include(v => v.SecondLevel!.Map!.Background)
                 .ToList()
                 .Select(v => new VerticalViewModel()
-            {
-                Id = v.Id,
-                GroupId = v.GroupId!.Value,
-                PeriodId = v.PeriodId!.Value,
-                Interval = new Interval()
                 {
-                   Start = v.Interval!.Start,
-                   End = v.Interval.End
-                },
-                Header = new Header()
-                {
-                    Title = v.Header!.Title,
-                    Description = v.Header.Description
-                },
-                Map = new MapViewModel()
-                {
-                    Background = _fileManager.GetFileLinksByName(2, verticalGuid, v.Map!.Background!.Main!).FirstOrDefault(),
-                },
-                Text = v.Text,
-                SecondLevel = new SecondLevelViewModel()
-                {
-                    id = v.SecondLevel!.Id,
+                    Id = v.Id,
+                    GroupId = v.GroupId!.Value,
+                    PeriodId = v.PeriodId!.Value,
+                    Interval = new Interval()
+                    {
+                        Start = v.Interval!.Start,
+                        End = v.Interval.End
+                    },
                     Header = new Header()
                     {
-                        Title = v.SecondLevel!.Header!.Title,
-                        Description = v.SecondLevel.Header.Description
+                        Title = v.Header!.Title,
+                        Description = v.Header.Description
                     },
-                    Background = _fileManager.GetFileLinksByName(5, verticalGuid, v.SecondLevel!.Background!.Main!).FirstOrDefault(),
-                    ThirdLevelBackground = _fileManager.GetFileLinksByName(6, verticalGuid, v.SecondLevel!.ThirdLevelBackground!.Main!).FirstOrDefault(),
                     Map = new MapViewModel()
                     {
-                        Background = _fileManager.GetFileLinksByName(2, verticalGuid, v.SecondLevel!.Map!.Background!.Main!).FirstOrDefault(),
+                        Background = _fileManager.GetFileLinksByName(2, verticalGuid, v.Map!.Background!.Main!).FirstOrDefault(),
                     },
-                    Text = v.SecondLevel!.Text,
-                    Sources = source.Any() ? source : null
-                }
-            }).FirstOrDefault();
+                    Text = v.Text,
+                    SecondLevel = new SecondLevelViewModel()
+                    {
+                        id = v.SecondLevel!.Id,
+                        Header = new Header()
+                        {
+                            Title = v.SecondLevel!.Header!.Title,
+                            Description = v.SecondLevel.Header.Description
+                        },
+                        Background = _fileManager.GetFileLinksByName(5, verticalGuid, v.SecondLevel!.Background!.Main!).FirstOrDefault(),
+                        ThirdLevelBackground = _fileManager.GetFileLinksByName(6, verticalGuid, v.SecondLevel!.ThirdLevelBackground!.Main!).FirstOrDefault(),
+                        Map = new MapViewModel()
+                        {
+                            Background = _fileManager.GetFileLinksByName(2, verticalGuid, v.SecondLevel!.Map!.Background!.Main!).FirstOrDefault(),
+                        },
+                        Text = v.SecondLevel!.Text,
+                        Sources = source.Any() ? source : null
+                    }
+                }).FirstOrDefault();
 
             return responce!;
         }
+
+        /*public async Task<List<VerticalViewModel>> GetVerticalAll()
+        {
+
+            var verticalGuid = _vertical.TableNoTracking.Where(v => v.GroupId == verticalId && v.PeriodId == periodId).Select(v => v.Id).FirstOrDefault().ToString();
+
+            var request = _vertical.TableNoTracking.Where(v => v.GroupId == verticalId && v.PeriodId == periodId).Select(v => v.SecondLevel!.Sources).FirstOrDefault();
+
+            var source = await HorisontalListForVertical(request!);
+
+            if (source.Any())
+            {
+                var test = source.OrderBy(x => x.Index);
+                source = test.ToList();
+            }
+
+            var responce = _vertical.TableNoTracking.Where(v => v.GroupId == verticalId && v.PeriodId == periodId)
+                .Include(v => v.Interval)
+                .Include(v => v.Header)
+                .Include(v => v.Map)
+                .Include(v => v.Map!.Background)
+                .Include(v => v.SecondLevel)
+                .Include(v => v.SecondLevel!.Header)
+                .Include(v => v.SecondLevel!.Background)
+                .Include(v => v.SecondLevel!.ThirdLevelBackground)
+                .Include(v => v.SecondLevel!.Map)
+                .Include(v => v.SecondLevel!.Map!.Background)
+                .ToList()
+                .Select(v => new VerticalViewModel()
+                {
+                    Id = v.Id,
+                    GroupId = v.GroupId!.Value,
+                    PeriodId = v.PeriodId!.Value,
+                    Interval = new Interval()
+                    {
+                        Start = v.Interval!.Start,
+                        End = v.Interval.End
+                    },
+                    Header = new Header()
+                    {
+                        Title = v.Header!.Title,
+                        Description = v.Header.Description
+                    },
+                    Map = new MapViewModel()
+                    {
+                        Background = _fileManager.GetFileLinksByName(2, verticalGuid, v.Map!.Background!.Main!).FirstOrDefault(),
+                    },
+                    Text = v.Text,
+                    SecondLevel = new SecondLevelViewModel()
+                    {
+                        id = v.SecondLevel!.Id,
+                        Header = new Header()
+                        {
+                            Title = v.SecondLevel!.Header!.Title,
+                            Description = v.SecondLevel.Header.Description
+                        },
+                        Background = _fileManager.GetFileLinksByName(5, verticalGuid, v.SecondLevel!.Background!.Main!).FirstOrDefault(),
+                        ThirdLevelBackground = _fileManager.GetFileLinksByName(6, verticalGuid, v.SecondLevel!.ThirdLevelBackground!.Main!).FirstOrDefault(),
+                        Map = new MapViewModel()
+                        {
+                            Background = _fileManager.GetFileLinksByName(2, verticalGuid, v.SecondLevel!.Map!.Background!.Main!).FirstOrDefault(),
+                        },
+                        Text = v.SecondLevel!.Text,
+                        Sources = source.Any() ? source : null
+                    }
+                }).FirstOrDefault();
+
+            return responce!;
+        }*/
 
         public async Task<List<VerticalListModel>> GetVerticalList()
         {
