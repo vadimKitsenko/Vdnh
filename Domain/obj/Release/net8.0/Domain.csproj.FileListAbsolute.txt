@@ -19,3 +19,4 @@ D:\Projects\VdnhApi\VdnhApi\Domain\obj\Release\net8.0\Domain.dll
 D:\Projects\VdnhApi\VdnhApi\Domain\obj\Release\net8.0\refint\Domain.dll
 D:\Projects\VdnhApi\VdnhApi\Domain\obj\Release\net8.0\Domain.pdb
 D:\Projects\VdnhApi\VdnhApi\Domain\obj\Release\net8.0\ref\Domain.dll
+D:\Projects\VdnhApi\VdnhApi\Domain\obj\Release\net8.0\Domain.sourcelink.json

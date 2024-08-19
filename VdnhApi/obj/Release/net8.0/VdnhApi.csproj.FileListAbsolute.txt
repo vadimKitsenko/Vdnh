@@ -175,3 +175,4 @@ D:\Projects\VdnhApi\VdnhApi\VdnhApi\obj\Release\net8.0\refint\VdnhApi.dll
 D:\Projects\VdnhApi\VdnhApi\VdnhApi\obj\Release\net8.0\VdnhApi.pdb
 D:\Projects\VdnhApi\VdnhApi\VdnhApi\obj\Release\net8.0\VdnhApi.genruntimeconfig.cache
 D:\Projects\VdnhApi\VdnhApi\VdnhApi\obj\Release\net8.0\ref\VdnhApi.dll
+D:\Projects\VdnhApi\VdnhApi\VdnhApi\obj\Release\net8.0\VdnhApi.sourcelink.json

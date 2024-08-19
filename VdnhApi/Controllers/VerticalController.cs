@@ -30,6 +30,13 @@ namespace VdnhApi.Controllers
             return await GetAnswerAsync(async () => await vertical.GetVertical(verticalId, periodId));
         }
 
+        [Route("all"), HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetIdVerticalAll()
+        {
+            return await GetAnswerAsync(async () => await vertical.GetVerticalAll());
+        }
+
         [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> GetListVertical()

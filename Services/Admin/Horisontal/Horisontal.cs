@@ -142,11 +142,6 @@ namespace Services.Admin.Horisontal
                             TitleName = h.About.Title.TitleName,
                             Number = h.About.Title.Number
                         },
-                        Main = new MainViewModel()
-                        {
-                            Img = _fileManager.GetFileLinksByName(8, h.Id.ToString(), h.About.Main!.Img!.Main!).FirstOrDefault(),
-                            Title = h.About.Main!.Title
-                        },
                         Text = h.About.Text,
                         Number = h.About.Number,
                         Background = _fileManager.GetFileLinksByName(3, h.Id.ToString(), h.About.Background!.Main!).FirstOrDefault(),
@@ -158,6 +153,50 @@ namespace Services.Admin.Horisontal
                     }).OrderBy(i => i.Priority).ToList()
                     }
                 }).ToList();
+
+            return responce!;
+        }
+
+        public async Task<HorisontalViewModel> GetHorisontalForSource(long? horisontalId)
+        {
+            if (horisontalId == null)
+                throw new ApiException("Не указан идентификатор для horisontal");
+
+            var horisontalGuid = horisontalId.Value.ToString();
+
+            var listImages = _horisontal.TableNoTracking.Where(h => h.Id == horisontalId && !h.IsDeleted).Select(h => h.About!.Images).FirstOrDefault()!.ToList();
+
+            var resultImage = listImages.Where(i => _fileManager.GetFileLinksByName(4, horisontalGuid, i.Main!).FirstOrDefault() != null).Select(i => new ImageLink
+            {
+                Link = _fileManager.GetFileLinksByName(4, horisontalGuid, i.Main!).FirstOrDefault(),
+            }).OrderBy(i => i.Priority).ToList();
+
+            var responce = _horisontal.TableNoTracking.Where(h => h.Id == horisontalId)
+                .Include(h => h.Img)
+                .Include(h => h.About)
+                .Include(h => h.About!.Main)
+                .Include(h => h.About!.Main!.Img)
+                .ToList()
+                .Select(h => new HorisontalViewModel()
+                {
+                    Id = h.Id,
+                    Img = _fileManager.GetFileLinksByName(1, horisontalGuid, h.Img!.Main!).FirstOrDefault(),
+                    X = h.X,
+                    Y = h.Y,
+                    Text = h.Text,
+                    Index = h.Index,
+                    About = new AboutViewModel()
+                    {
+                        Main = new MainViewModel()
+                        {
+                            Img = _fileManager.GetFileLinksByName(8, horisontalGuid, h.About!.Main!.Img!.Main!).FirstOrDefault(),
+                            Title = h.About.Main!.Title
+                        },
+                        Text = h.About.Text,
+                        Number = h.About.Number,
+                        Images = resultImage
+                    }
+                }).FirstOrDefault();
 
             return responce!;
         }

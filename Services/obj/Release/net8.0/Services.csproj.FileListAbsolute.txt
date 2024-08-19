@@ -21,3 +21,4 @@ D:\Projects\VdnhApi\VdnhApi\Services\obj\Release\net8.0\Services.dll
 D:\Projects\VdnhApi\VdnhApi\Services\obj\Release\net8.0\refint\Services.dll
 D:\Projects\VdnhApi\VdnhApi\Services\obj\Release\net8.0\Services.pdb
 D:\Projects\VdnhApi\VdnhApi\Services\obj\Release\net8.0\ref\Services.dll
+D:\Projects\VdnhApi\VdnhApi\Services\obj\Release\net8.0\Services.sourcelink.json
