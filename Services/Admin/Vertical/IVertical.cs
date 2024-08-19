@@ -19,7 +19,7 @@ namespace Services.Admin.Vertical
 
         Task<BaseModel> InsertVertical(Domain.RequestModel.VerticalRequestModel? insertModel);
 
-        Task<List<VerticalViewModel>> GetVerticalAll();
+        Task<List<VerticalAllViewModel>> GetVerticalAll();
 
         Task<BaseModel> DeleteVertical(long? verticalId);
     }

@@ -122,9 +122,9 @@ namespace Services.Admin.Vertical
             return responce!;
         }
 
-        public async Task<List<VerticalViewModel>> GetVerticalAll()
+        public async Task<List<VerticalAllViewModel>> GetVerticalAll()
         {
-            List<VerticalViewModel> responce = new List<VerticalViewModel>();
+            List<VerticalAllViewModel> responce = new List<VerticalAllViewModel>();
 
             foreach (var elem in _vertical.TableNoTracking.Where(v => !v.IsDeleted)
                 .Include(v => v.Interval)
@@ -137,6 +137,7 @@ namespace Services.Admin.Vertical
                 .Include(v => v.SecondLevel!.ThirdLevelBackground)
                 .Include(v => v.SecondLevel!.Map)
                 .Include(v => v.SecondLevel!.Map!.Background)
+                .Include(v => v.SecondLevel!.Sources)
                 .ToList())
             {
                 var verticalGuid = elem.Id.ToString();
@@ -149,7 +150,7 @@ namespace Services.Admin.Vertical
                     source = test.ToList();
                 }
 
-                var result = new VerticalViewModel()
+                var result = new VerticalAllViewModel()
                 {
                     Id = elem.Id,
                     Interval = new Interval()
@@ -167,7 +168,7 @@ namespace Services.Admin.Vertical
                         Background = _fileManager.GetFileLinksByName(2, verticalGuid, elem.Map!.Background!.Main!).FirstOrDefault(),
                     },
                     Text = elem.Text,
-                    SecondLevel = new SecondLevelViewModel()
+                    SecondLevel = new SecondLevelAllViewModel()
                     {
                         id = elem.SecondLevel!.Id,
                         Header = new Header()
@@ -280,7 +281,7 @@ namespace Services.Admin.Vertical
                     }
                 }).FirstOrDefault();
 
-                using var transaction = _vertical.DbContext.Database.BeginTransaction();
+                //using var transaction = _vertical.DbContext.Database.BeginTransaction();
 
                 if (updateModel.Map != null && updateModel.Map!.Background != null && updateModel.Map!.Background!.FromDataFile != null && _fileManager.GetFileLinksByName(2, verticalGuid, responce!.Map!.Background!.Main!).FirstOrDefault() == null)
                     await SaveFiles(updateModel.Map.Background.FromDataFile!, updateModel.Id, "MapBackground");
@@ -296,7 +297,7 @@ namespace Services.Admin.Vertical
 
                 await _vertical.Update(responce!);
 
-                transaction.Commit();
+                //transaction.Commit();
 
                 return new BaseModel { result = true, Value = responce!.Id };
             }
@@ -426,9 +427,9 @@ namespace Services.Admin.Vertical
             return responce;
         }
 
-        private async Task<List<HorisontalViewModel>> HorisontalListForVerticalList(List<Data.Entities.Horisontal> list)
+        private async Task<List<HorisontalForVerticalViewModel>> HorisontalListForVerticalList(List<Data.Entities.Horisontal> list)
         {
-            List<HorisontalViewModel> responce = new List<HorisontalViewModel>();
+            List<HorisontalForVerticalViewModel> responce = new List<HorisontalForVerticalViewModel>();
 
             foreach (var horisontal in list!)
             {

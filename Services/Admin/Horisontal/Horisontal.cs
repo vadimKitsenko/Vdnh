@@ -157,7 +157,7 @@ namespace Services.Admin.Horisontal
             return responce!;
         }
 
-        public async Task<HorisontalViewModel> GetHorisontalForSource(long? horisontalId)
+        public async Task<HorisontalForVerticalViewModel> GetHorisontalForSource(long? horisontalId)
         {
             if (horisontalId == null)
                 throw new ApiException("Не указан идентификатор для horisontal");
@@ -166,10 +166,10 @@ namespace Services.Admin.Horisontal
 
             var listImages = _horisontal.TableNoTracking.Where(h => h.Id == horisontalId && !h.IsDeleted).Select(h => h.About!.Images).FirstOrDefault()!.ToList();
 
-            var resultImage = listImages.Where(i => _fileManager.GetFileLinksByName(4, horisontalGuid, i.Main!).FirstOrDefault() != null).Select(i => new ImageLink
-            {
-                Link = _fileManager.GetFileLinksByName(4, horisontalGuid, i.Main!).FirstOrDefault(),
-            }).OrderBy(i => i.Priority).ToList();
+            listImages = listImages.OrderBy(l => l.Priority).ToList();
+
+            List<string> resultImage = listImages.Where(i => _fileManager.GetFileLinksByName(4, horisontalGuid, i.Main!).FirstOrDefault() != null)
+                .Select(i => _fileManager.GetFileLinksByName(4, horisontalGuid, i.Main!).FirstOrDefault()).ToList()!;
 
             var responce = _horisontal.TableNoTracking.Where(h => h.Id == horisontalId)
                 .Include(h => h.Img)
@@ -177,7 +177,7 @@ namespace Services.Admin.Horisontal
                 .Include(h => h.About!.Main)
                 .Include(h => h.About!.Main!.Img)
                 .ToList()
-                .Select(h => new HorisontalViewModel()
+                .Select(h => new HorisontalForVerticalViewModel()
                 {
                     Id = h.Id,
                     Img = _fileManager.GetFileLinksByName(1, horisontalGuid, h.Img!.Main!).FirstOrDefault(),
@@ -185,7 +185,7 @@ namespace Services.Admin.Horisontal
                     Y = h.Y,
                     Text = h.Text,
                     Index = h.Index,
-                    About = new AboutViewModel()
+                    About = new AboutForVerticalViewModel()
                     {
                         Main = new MainViewModel()
                         {
@@ -313,7 +313,7 @@ namespace Services.Admin.Horisontal
                     }
                 }).FirstOrDefault();
 
-                using var transaction = _horisontal.DbContext.Database.BeginTransaction();
+               // using var transaction = _horisontal.DbContext.Database.BeginTransaction();
 
                 if (updateModel.About != null && updateModel.About!.Images != null)
                     foreach (ImageRequestModel file in updateModel.About!.Images!)
@@ -338,7 +338,7 @@ namespace Services.Admin.Horisontal
 
                 await _image.Delete(deleteImages!);
 
-                transaction.Commit();
+                //transaction.Commit();
 
                 return new BaseModel { result = true, Value = updateModel!.Id };
             }

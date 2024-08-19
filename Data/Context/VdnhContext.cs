@@ -40,7 +40,7 @@ namespace Data.Context
         public DbSet<SecondLevel>? SecondLevels { get; set; }
         public DbSet<Vertical>? Verticals { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
 
                 if (!optionsBuilder.IsConfigured)
@@ -48,7 +48,7 @@ namespace Data.Context
                         "Server=localhost;Port=5432;User Id=postgres;Password=qwerty123456;Database=VdnhBd;"
                         
                     );
-            }
+            }*/
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -59,7 +59,7 @@ namespace Data.Context
     }
 }
 
-public class VdnhContextFactory : IDesignTimeDbContextFactory<VdnhContext>
+/*public class VdnhContextFactory : IDesignTimeDbContextFactory<VdnhContext>
 {
     public VdnhContext CreateDbContext(string[] args)
     {
@@ -70,4 +70,4 @@ public class VdnhContextFactory : IDesignTimeDbContextFactory<VdnhContext>
 
         return new VdnhContext(optionsBuilder.Options);
     }
-}
+}*/

@@ -17,9 +17,9 @@ public class Startup(IConfiguration configuration) : Core.Startup(configuration)
     public override void ConfigureServices(IServiceCollection services)
     {
         base.ConfigureServices(services);
-        services.AddDbContext<CoreContext>();
+        /*services.AddDbContext<CoreContext>();
         services.AddDbContext<VdnhContext>();
-        services.AddDbContext<AuthContext>();
+        services.AddDbContext<AuthContext>();*/
         services.AddDatabase<CoreContext>("DefaultConnection");
         services.AddDatabase<VdnhContext>("DefaultConnection");
         services.AddDatabase<AuthContext>("IdentityConnection");

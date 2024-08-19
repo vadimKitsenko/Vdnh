@@ -21,7 +21,7 @@ namespace Services.Admin.Horisontal
 
         Task<List<HorisontalViewModel>> GetHorisontalAll();
 
-        Task<HorisontalViewModel> GetHorisontalForSource(long? horisontalId);
+        Task<HorisontalForVerticalViewModel> GetHorisontalForSource(long? horisontalId);
 
         Task<BaseModel> DeleteHorisontal(long? horisontalId);
     }
